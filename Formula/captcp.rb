@@ -8,7 +8,6 @@ class Captcp < Formula
   depends_on "py2cairo"
   depends_on "numpy"
   depends_on "imagemagick"
-  depends_on "gv"
   depends_on "gnuplot" => :recommended
   depends_on "mactex" => :optional
 
