@@ -7,16 +7,16 @@ class Captcp < Formula
   depends_on "python"
   depends_on "homebrew/python/numpy"
 
-  pip_deps = %w[
+  pip_deps = 
+  def install
+    %w[
     dpkt==1.8.7
     python-geoip==1.2
     pycairo==1.10.0
-  ]
-
-  def install
-    pip_deps.each do |pip_dep|
+    ].each do |pip_dep|
       system "pip", "install", pip_dep
     end
+
     inreplace "captcp.py", "#!/usr/bin/env python2", "#!/usr/bin/env python"
     system "make", "PREFIX=#{prefix}"
     system "make", "install", "PREFIX=#{prefix}"
