@@ -5,14 +5,13 @@ class Captcp < Formula
   sha256 "c7f61a15aba9aefa517ee3ebbd92d5ca9fd5abc4badad8fef99c4d37a95d13a3"
 
   depends_on "python"
+  depends_on "py2cairo"
   depends_on "homebrew/python/numpy"
 
-  pip_deps = 
   def install
     %w[
     dpkt==1.8.7
     python-geoip==1.2
-    pycairo==1.10.0
     ].each do |pip_dep|
       system "pip", "install", pip_dep
     end
