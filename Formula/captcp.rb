@@ -6,7 +6,11 @@ class Captcp < Formula
 
   depends_on "python"
   depends_on "py2cairo"
-  depends_on "homebrew/python/numpy"
+  depends_on "numpy"
+  depends_on "imagemagick"
+  depends_on "gv"
+  depends_on "gnuplot" => :recommended
+  depends_on "mactex" => :optional
 
   def install
     %w[
