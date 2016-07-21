@@ -15,7 +15,7 @@ class Captcp < Formula
 
   def install
     pip_deps.each do |pip_dep|
-      system "pip", "install", pip_dep=
+      system "pip", "install", pip_dep
     end
     inreplace "captcp.py", "#!/usr/bin/env python2", "#!/usr/bin/env python"
     system "make", "PREFIX=#{prefix}"
