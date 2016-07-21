@@ -5,7 +5,7 @@ class Captcp < Formula
   sha256 "c7f61a15aba9aefa517ee3ebbd92d5ca9fd5abc4badad8fef99c4d37a95d13a3"
 
   def install
-    system "make"
-    system "make", "install"
+    system "make", "PREFIX=#{prefix}"
+    system "make", "install", "PREFIX=#{prefix}"
   end
 end
